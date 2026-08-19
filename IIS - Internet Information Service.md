@@ -86,5 +86,45 @@ A binding defines how a website is accessed by specifying the protocol (HTTP/HTT
 
 ***# Can IIS host multiple websites?***
 
-Yes. IIS can host multiple websites on the same server using different hostnames, ports, IP addresses, or bindings.
+Yes. IIS can host multiple websites on the same Windows Server using bindings, which is similar to virtual hosting. A binding identifies a website using IP address, port, and host name. For example, I can host company.com, shop.com, and blog.com on the same server and the same port 80 by configuring different host names. When a request arrives, IIS checks the Host header and matches it with the configured binding, then sends the request to the corresponding website and its physical directory. For HTTPS, SNI can be used to host multiple SSL websites on the same IP and port.
+
+
+
+**# Types of Virtual Hosting in IIS:**
+
+1\. Host-name based:
+
+Different hostnames, same IP/port.
+
+192.168.1.10:80
+
+&#x20;       ├── company.com
+
+&#x20;       ├── shop.com
+
+&#x20;       └── blog.com
+
+
+
+2\. IP-based:
+
+Each website has a different IP.
+
+192.168.1.10 → company.com
+
+192.168.1.11 → shop.com
+
+192.168.1.12 → blog.com
+
+
+
+3\. Port-based:
+
+This is possible but generally less convenient for public websites.
+
+192.168.1.10:80   → company.com
+
+192.168.1.10:8080 → shop.com
+
+192.168.1.10:8081 → blog.com
 
