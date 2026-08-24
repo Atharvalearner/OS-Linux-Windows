@@ -121,7 +121,7 @@ Active Directory requires DNS because clients use DNS to locate the Domain Contr
 
 ***# Which protocols are used to find and authenticate a user in Active Directory?***
 
-First, the client uses DNS, typically UDP port 53, to locate a Domain Controller by querying AD DNS records, especially SRV records. Once the Domain Controller is located, Kerberos, normally using UDP or TCP port 88, is used for user authentication and ticket issuance. LDAP, typically on port 389 or LDAPS on 636, is then used when applications or systems need to query AD for Directory information. 
+First, the client uses DNS, typically UDP port 53, to locate a Domain Controller by querying AD DNS records, especially SRV records. Once the Domain Controller is located, Kerberos UDP or TCP port 88, is used for user authentication and ticket issuance. LDAP, typically on port 389 or LDAPS on 636, is then used when applications or systems need to query AD for Directory information.
 
 Simply: DNS finds the DC, Kerberos authenticates, and LDAP accesses directory information.
 

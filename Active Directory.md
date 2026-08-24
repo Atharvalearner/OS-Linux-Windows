@@ -137,5 +137,5 @@ Yes. Linux has directory and centralized identity solutions such as ***OpenLDAP 
 
 Windows >> Active Directory: AD DS + LDAP + Kerberos + DNS + Group Policy
 
-Linux   >> FreeIPA: 	     LDAP + Kerberos + DNS + Certificates + Policies
+Linux   >> FreeIPA: 	     Certificates + LDAP + Kerberos + DNS + Policies
 

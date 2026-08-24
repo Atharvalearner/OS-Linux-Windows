@@ -50,5 +50,11 @@ If the computer suddenly loses power during the operation, NTFS can use the jour
 
 
 
+**# Where is the NTFS Journal Located ?**
 
+Because it is a critical system component, Windows hides it inside the Master File Table (MFT) at the root level of your drive
+
+**Transaction Log Path**: C:\\$LogFile
+
+**Change Journal Path:** C:\\$Extend\\$UsnJrnl
 
